@@ -25,6 +25,7 @@ public class SpawnGenerator : MonoBehaviour
     private void SetRandomPoint()
     {
         int index = Random.Range(0, _points.Length);
+        
         _points[index].gameObject.SetActive(true);
     }
 }

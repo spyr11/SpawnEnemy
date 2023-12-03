@@ -118,6 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ab45ae05d2166fa1b8dfc4a349bea54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 1661243440819731643, guid: 0148dc122cc910dacb6bb19017a4f74e, type: 3}
-  _attackPoint: {fileID: -1521436508279004958, guid: 93b9ef0096437f726838a60aed248605, type: 3}
-  _maxRespawnDistance: 50
+  _enemy: {fileID: 3394763813597588435, guid: 0148dc122cc910dacb6bb19017a4f74e, type: 3}
+  _target: {fileID: -1521436508279004958, guid: 93b9ef0096437f726838a60aed248605, type: 3}
+  _maxTargetDistance: 40

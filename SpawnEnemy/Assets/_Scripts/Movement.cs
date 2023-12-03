@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _speed;
 
     private Rigidbody _rigidbody;
-    private AttackPoint _target;
+    private Transform _target;
     private bool _isMoving;
 
     private void Start()
@@ -16,9 +16,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        Vector3 targetPosition = _target.transform.position;
-
-        transform.LookAt(targetPosition);
+        transform.LookAt(_target.position);
 
         if (_isMoving)
         {
@@ -28,23 +26,23 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other==_target.GetComponent<Collider>())
+        if (other == _target.GetComponent<Collider>())
         {
-            _isMoving = false;
             _rigidbody.velocity = Vector3.zero;
+            _isMoving = false;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other==_target.GetComponent<Collider>())
+        if (other == _target.GetComponent<Collider>())
         {
             _isMoving = true;
         }
     }
 
-    public void GetTarget(AttackPoint target)
+    public void SetTarget(Transform target)
     {
         _target = target;
-    }
+    }    
 }
